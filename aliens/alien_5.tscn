@@ -1,0 +1,63 @@
+[gd_scene load_steps=9 format=3 uid="uid://bmqh5uhnvbl6r"]
+
+[ext_resource type="Script" path="res://aliens/alien.gd" id="1_qji7n"]
+[ext_resource type="Texture2D" uid="uid://ierhimpvk26d" path="res://art/alien5.png" id="2_6m60j"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hil3u"]
+atlas = ExtResource("2_6m60j")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hekei"]
+atlas = ExtResource("2_6m60j")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v6at5"]
+atlas = ExtResource("2_6m60j")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2dtt7"]
+atlas = ExtResource("2_6m60j")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v83ji"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hil3u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hekei")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v6at5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2dtt7")
+}],
+"loop": true,
+"name": &"move",
+"speed": 7.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qwjy8"]
+size = Vector2(48, 48)
+
+[node name="Alien5" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_qji7n")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_v83ji")
+animation = &"move"
+
+[node name="TimeBeforeNextMove" type="Timer" parent="."]
+unique_name_in_owner = true
+one_shot = true
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_qwjy8")
+
+[connection signal="timeout" from="TimeBeforeNextMove" to="." method="_on_time_before_next_move_timeout"]

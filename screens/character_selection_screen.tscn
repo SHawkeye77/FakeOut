@@ -1,0 +1,204 @@
+[gd_scene load_steps=12 format=3 uid="uid://bjka1mehyhr0y"]
+
+[ext_resource type="Script" path="res://screens/character_selection_screen.gd" id="1_3bqb7"]
+[ext_resource type="Texture2D" uid="uid://cuwfqjwwutfvu" path="res://art/alien1.png" id="2_y1sra"]
+[ext_resource type="Texture2D" uid="uid://be6ie8gkio0xo" path="res://art/alien2.png" id="3_1pkpq"]
+[ext_resource type="Texture2D" uid="uid://hkpd7s3y7l7p" path="res://art/alien3.png" id="4_hbpxi"]
+[ext_resource type="Texture2D" uid="uid://bvmknxbc4rl35" path="res://art/alien4.png" id="5_k3qdn"]
+[ext_resource type="Texture2D" uid="uid://ierhimpvk26d" path="res://art/alien5.png" id="6_0xmre"]
+[ext_resource type="Texture2D" uid="uid://cqha1u12fy6ce" path="res://art/alien6.png" id="7_s00dv"]
+[ext_resource type="Texture2D" uid="uid://b2gfhsfen4h86" path="res://art/alien7.png" id="8_pve61"]
+[ext_resource type="Texture2D" uid="uid://c5vg7oyxwf8qq" path="res://art/alien8.png" id="9_3ntoo"]
+[ext_resource type="Texture2D" uid="uid://cuvhdfo0gibtk" path="res://art/alien9.png" id="10_g3mdm"]
+[ext_resource type="Texture2D" uid="uid://p7lkqmonma5m" path="res://art/alien10.png" id="11_2v5go"]
+
+[node name="CharacterSelectionScreen" type="Node2D"]
+script = ExtResource("1_3bqb7")
+
+[node name="AdvanceAnimations" type="Timer" parent="."]
+unique_name_in_owner = true
+autostart = true
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+color = Color(0.2, 0, 1, 1)
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 359.0
+offset_top = 16.0
+offset_right = 939.0
+offset_bottom = 64.0
+theme_override_font_sizes/font_size = 30
+text = "Select Your Character"
+horizontal_alignment = 1
+
+[node name="Alien1" type="Sprite2D" parent="Control"]
+unique_name_in_owner = true
+position = Vector2(144, 169)
+scale = Vector2(5, 5)
+texture = ExtResource("2_y1sra")
+hframes = 4
+
+[node name="Alien1Button" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 92.0
+offset_top = 233.0
+offset_right = 196.0
+offset_bottom = 283.0
+text = "Alien 1"
+
+[node name="Alien2" type="Sprite2D" parent="Control"]
+unique_name_in_owner = true
+position = Vector2(396, 172)
+scale = Vector2(5, 5)
+texture = ExtResource("3_1pkpq")
+hframes = 4
+
+[node name="Alien2Button" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 342.0
+offset_top = 233.0
+offset_right = 446.0
+offset_bottom = 283.0
+text = "Alien 2"
+
+[node name="Alien3" type="Sprite2D" parent="Control"]
+unique_name_in_owner = true
+position = Vector2(667, 174)
+scale = Vector2(5, 5)
+texture = ExtResource("4_hbpxi")
+hframes = 4
+
+[node name="Alien3Button" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 614.0
+offset_top = 235.0
+offset_right = 718.0
+offset_bottom = 285.0
+text = "Alien 3"
+
+[node name="Alien4" type="Sprite2D" parent="Control"]
+unique_name_in_owner = true
+position = Vector2(922, 175)
+scale = Vector2(5, 5)
+texture = ExtResource("5_k3qdn")
+hframes = 4
+
+[node name="Alien4Button" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 871.0
+offset_top = 236.0
+offset_right = 975.0
+offset_bottom = 286.0
+text = "Alien 4"
+
+[node name="Alien5" type="Sprite2D" parent="Control"]
+unique_name_in_owner = true
+position = Vector2(1157, 175)
+scale = Vector2(5, 5)
+texture = ExtResource("6_0xmre")
+hframes = 4
+
+[node name="Alien5Button" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 1104.0
+offset_top = 237.0
+offset_right = 1208.0
+offset_bottom = 287.0
+text = "Alien 5"
+
+[node name="Alien6" type="Sprite2D" parent="Control"]
+unique_name_in_owner = true
+position = Vector2(139, 423)
+scale = Vector2(5, 5)
+texture = ExtResource("7_s00dv")
+hframes = 4
+
+[node name="Alien6Button" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 89.0
+offset_top = 493.0
+offset_right = 193.0
+offset_bottom = 543.0
+text = "Alien 6"
+
+[node name="Alien7" type="Sprite2D" parent="Control"]
+unique_name_in_owner = true
+position = Vector2(391, 427)
+scale = Vector2(5, 5)
+texture = ExtResource("8_pve61")
+hframes = 4
+
+[node name="Alien7Button" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 337.0
+offset_top = 491.0
+offset_right = 441.0
+offset_bottom = 541.0
+text = "Alien 7"
+
+[node name="Alien8" type="Sprite2D" parent="Control"]
+unique_name_in_owner = true
+position = Vector2(662, 427)
+scale = Vector2(5, 5)
+texture = ExtResource("9_3ntoo")
+hframes = 4
+
+[node name="Alien8Button" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 611.0
+offset_top = 492.0
+offset_right = 715.0
+offset_bottom = 542.0
+text = "Alien 8"
+
+[node name="Alien9" type="Sprite2D" parent="Control"]
+unique_name_in_owner = true
+position = Vector2(922, 428)
+scale = Vector2(5, 5)
+texture = ExtResource("10_g3mdm")
+hframes = 4
+
+[node name="Alien9Button" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 868.0
+offset_top = 492.0
+offset_right = 972.0
+offset_bottom = 542.0
+text = "Alien 9"
+
+[node name="Alien10" type="Sprite2D" parent="Control"]
+unique_name_in_owner = true
+position = Vector2(1162, 428)
+scale = Vector2(5, 5)
+texture = ExtResource("11_2v5go")
+hframes = 4
+
+[node name="Alien10Button" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 1105.0
+offset_top = 493.0
+offset_right = 1209.0
+offset_bottom = 543.0
+text = "Alien 10"
+
+[connection signal="timeout" from="AdvanceAnimations" to="." method="_on_advance_animations_timeout"]
+[connection signal="pressed" from="Control/Alien1Button" to="." method="_on_alien_1_button_pressed"]
+[connection signal="pressed" from="Control/Alien2Button" to="." method="_on_alien_2_button_pressed"]
+[connection signal="pressed" from="Control/Alien3Button" to="." method="_on_alien_3_button_pressed"]
+[connection signal="pressed" from="Control/Alien4Button" to="." method="_on_alien_4_button_pressed"]
+[connection signal="pressed" from="Control/Alien5Button" to="." method="_on_alien_5_button_pressed"]
+[connection signal="pressed" from="Control/Alien6Button" to="." method="_on_alien_6_button_pressed"]
+[connection signal="pressed" from="Control/Alien7Button" to="." method="_on_alien_7_button_pressed"]
+[connection signal="pressed" from="Control/Alien8Button" to="." method="_on_alien_8_button_pressed"]
+[connection signal="pressed" from="Control/Alien9Button" to="." method="_on_alien_9_button_pressed"]
+[connection signal="pressed" from="Control/Alien10Button" to="." method="_on_alien_10_button_pressed"]

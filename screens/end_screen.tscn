@@ -1,0 +1,47 @@
+[gd_scene load_steps=2 format=3 uid="uid://dp2cknksrp5uu"]
+
+[ext_resource type="Script" path="res://screens/end_screen.gd" id="1_1leem"]
+
+[node name="EndScreen" type="Node2D"]
+script = ExtResource("1_1leem")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+color = Color(0.2, 0, 1, 1)
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 490.0
+offset_top = 63.0
+offset_right = 817.0
+offset_bottom = 155.0
+theme_override_font_sizes/font_size = 60
+text = "Game Over"
+
+[node name="WinnerLabel" type="Label" parent="Control"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 566.0
+offset_top = 170.0
+offset_right = 740.0
+offset_bottom = 196.0
+horizontal_alignment = 1
+
+[node name="MainMenuButton" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 544.0
+offset_top = 557.0
+offset_right = 746.0
+offset_bottom = 641.0
+theme_override_font_sizes/font_size = 35
+text = "Main Menu"
+
+[connection signal="pressed" from="Control/MainMenuButton" to="." method="_on_main_menu_button_pressed"]
